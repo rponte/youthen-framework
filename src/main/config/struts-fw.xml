@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+
+    <!-- System settings -->
+    <constant name="struts.convention.default.parent.package" value="youthen-default" />
+    <package name="youthen-default" extends="struts-default" abstract="true">
+        <result-types>
+            <result-type name="json" class="org.apache.struts2.json.JSONResult"/>
+        </result-types>
+        <interceptors>
+            <interceptor name="json" class="org.apache.struts2.json.JSONInterceptor"/>
+            <interceptor-stack name="youthenDefaultAjaxStack">
+                <interceptor-ref name="json" />
+                <interceptor-ref name="basicStack" />
+            </interceptor-stack>
+        </interceptors>
+
+        <!-- global-exception-mappings -->
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.RuntimeException" result="fatal" />
+            <exception-mapping exception="org.apache.catalina.connector.ClientAbortException" result="ignore" />
+            <exception-mapping exception="com.ibm.wsspi.webcontainer.ClosedConnectionException" result="ignore" />
+            <exception-mapping exception="com.youthen.framework.common.exception.InterceptorAccessDeniedException" result="denied" />
+        </global-exception-mappings>
+
+    </package>
+</struts>

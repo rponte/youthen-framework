@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.youthen.framework.persistence.entity">
+	<class name="QueryAudittrail" table="V_QUERY_AUDITTRAIL">
+		<id name="id"  column="ID"  type="java.lang.Long">
+            <generator class="identity"/>
+        </id>
+		
+		<property name="userId" column="USER_ID" type="java.lang.String" />
+		<property name="queryId" column="QUERY_ID" type="java.lang.String" />
+		<property name="queryParameter" column="QUERY_PARAMETER" type="java.lang.String" />
+		<property name="querySql" column="QUERY_SQL" type="java.lang.String" />
+		<property name="queryResult" column="QUERY_RESULT" type="java.lang.String" />
+		<property name="queryCount" column="QUERY_COUNT" type="java.lang.Integer" />
+		<property name="queryTime" column="QUERY_TIME" type="java.util.Date" />
+		<property name="bakColumn1" column="BAK_COLUMN1" type="java.lang.String" />
+		<property name="bakColumn2" column="BAK_COLUMN2" type="java.lang.String" />
+		<property name="bakColumn3" column="BAK_COLUMN3" type="java.lang.String" />
+		<property name="bakColumn4" column="BAK_COLUMN4" type="java.lang.String" />
+		<property name="bakColumn5" column="BAK_COLUMN5" type="java.lang.String" />
+		<property name="bakColumn6" column="BAK_COLUMN6" type="java.lang.String" />
+		<property name="bakColumn7" column="BAK_COLUMN7" type="java.lang.String" />
+		<property name="bakColumn8" column="BAK_COLUMN8" type="java.lang.String" />
+		<property name="bakColumn9" column="BAK_COLUMN9" type="java.lang.String" />
+		<property name="bakColumn10" column="BAK_COLUMN10" type="java.lang.String" />
+	</class>
+</hibernate-mapping>

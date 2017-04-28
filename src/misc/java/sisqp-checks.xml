@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.3//EN" "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
+
+<!--
+    This configuration file was written by the eclipse-cs plugin configuration editor
+-->
+<module name="Checker">
+  <property name="severity" value="warning"/>
+  <message key="general.exception" value="Checker：Got an exception - {0}"/>
+  <module name="TreeWalker">
+    <message key="general.exception" value="TreeWalker：Got an exception - {0}"/>
+    <module name="FileContentsHolder"/>
+    <module name="ConstantName">
+      <message key="name.invalidPattern" value="定数名 ''{0}'' はパターン ''{1}'' に一致しなければなりません。"/>
+    </module>
+    <module name="AvoidStarImport">
+      <property name="excludes" value="org.junit.Assert"/>
+    </module>
+    <module name="AbstractClassName">
+      <property name="format" value="^[A-Z][a-zA-Z0-9]*$|Abstract[a-zA-Z0-9]$"/>
+      <message key="illegal.abstract.class.name" value="抽象クラス名 ''{0}'' はパターン ''{1}'' に一致しなければなりません。"/>
+    </module>
+    <module name="PackageName">
+      <property name="format" value="^jp.co.proship.[a-z][a-z0-9_]+(\.[a-z_][a-z0-9_]*)*$"/>
+      <message key="name.invalidPattern" value="パッケージ名 ''{0}'' はパターン ''{1}'' に一致しなければなりません。"/>
+    </module>
+    <module name="RedundantImport"/>
+    <module name="MethodLength"/>
+    <module name="TodoComment">
+      <property name="format" value="TODO"/>
+    </module>
+    <module name="ArrayTypeStyle">
+      <message key="array.type.style" value="配列の[]が変数の後ろに記述されています。"/>
+    </module>
+    <module name="CyclomaticComplexity">
+      <property name="severity" value="warning"/>
+      <property name="max" value="16"/>
+      <message key="cyclomaticComplexity" value="比較式が{0,number,integer}存在します。{1,number,integer})を超える場合、リファクタリングを推奨します。"/>
+    </module>
+    <module name="FinalClass"/>
+    <module name="StringLiteralEquality"/>
+    <module name="MissingSwitchDefault"/>
+    <module name="ModifiedControlVariable">
+      <property name="severity" value="info"/>
+    </module>
+    <module name="RedundantThrows">
+      <property name="allowUnchecked" value="true"/>
+      <property name="allowSubclasses" value="true"/>
+      <property name="suppressLoadErrors" value="true"/>
+      <message key="redundant.throws.duplicate" value="''{0}'' が重複しています。"/>
+      <message key="redundant.throws.subclass" value="''{0}'' は ''{1}'' のサブクラスです。"/>
+      <message key="redundant.throws.unchecked" value="''{0}'' はチェックされない例外です。"/>
+    </module>
+    <module name="PackageDeclaration"/>
+    <module name="DeclarationOrder">
+      <message key="declaration.order.constructor" value="コンストラクタの定義順序が間違っています。(定義順序：クラス変数(public, protected, package-private, private), インスタンス変数(public, protected, package-private, private), コンストラクタ, メソッド)"/>
+      <message key="declaration.order.access" value="変数アクセスの定義順序が間違っています。(定義順序：クラス変数(public, protected, package-private, private), インスタンス変数(public, protected, package-private, private), コンストラクタ, メソッド)"/>
+      <message key="declaration.order.instance" value="インスタンス変数の定義順序が間違っています。(定義順序：クラス変数(public, protected, package-private, private), インスタンス変数(public, protected, package-private, private), コンストラクタ, メソッド)"/>
+      <message key="declaration.order.method" value="メソッドの定義順序が間違っています。(定義順序：クラス変数(public, protected, package-private, private), インスタンス変数(public, protected, package-private, private), コンストラクタ, メソッド)"/>
+      <message key="declaration.order.static" value="クラス変数の定義順序が間違っています。(定義順序：クラス変数(public, protected, package-private, private), インスタンス変数(public, protected, package-private, private), コンストラクタ, メソッド)"/>
+    </module>
+    <module name="DefaultComesLast">
+      <message key="default.comes.last" value="defaultはswitchの最後に記述する必要があります。"/>
+    </module>
+    <module name="SimplifyBooleanExpression"/>
+    <module name="SimplifyBooleanReturn">
+      <property name="severity" value="info"/>
+    </module>
+    <module name="LocalFinalVariableName">
+      <message key="name.invalidPattern" value="ローカルfinal変数名 ''{0}'' はパターン ''{1}'' に一致しなければなりません。"/>
+    </module>
+    <module name="LocalVariableName">
+      <property name="tokens" value="VARIABLE_DEF"/>
+      <message key="name.invalidPattern" value="ローカル変数名 ''{0}'' はパターン ''{1}'' に一致しなければなりません。"/>
+    </module>
+    <module name="MemberName">
+      <message key="name.invalidPattern" value="インスタンス変数名 ''{0}'' はパターン ''{1}'' に一致しなければなりません。"/>
+    </module>
+    <module name="MethodName">
+      <message key="name.invalidPattern" value="メソッド名 ''{0}'' はパターン ''{1}'' に一致しなければなりません。"/>
+      <message key="method.name.equals.class.name" value="メソッド名 ''{0}'' must not equal the enclosing class name."/>
+    </module>
+    <module name="StaticVariableName">
+      <property name="format" value="^s[A-Z][a-zA-Z0-9]*$"/>
+      <message key="name.invalidPattern" value="static変数名 ''{0}'' はパターン ''{1}'' に一致しなければなりません。"/>
+    </module>
+    <module name="TypeName">
+      <property name="format" value="^[A-Z][a-zA-Z0-9]*$|I[A-Z][a-zA-Z0-9]*$"/>
+      <message key="name.invalidPattern" value="クラス名またはインタフェース名 ''{0}'' はパターン ''{1}'' に一致しなければなりません。"/>
+    </module>
+    <module name="ParameterName">
+      <property name="format" value="^a[A-Z][a-zA-Z0-9]*$"/>
+      <message key="name.invalidPattern" value="パラメータ名 ''{0}'' はパターン ''{1}'' に一致しなければなりません。"/>
+    </module>
+    <module name="IllegalImport"/>
+    <module name="AnonInnerLength">
+      <property name="max" value="2000"/>
+      <message key="maxLen.anonInner" value="匿名インナークラスの長さが {0,number,integer} 行あります（最大 {1,number,integer} 行まで）。"/>
+    </module>
+    <module name="ParameterNumber">
+      <property name="severity" value="info"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="ModifierOrder">
+      <message key="mod.order" value="''{0}'' 修飾子がJava推奨の順序に沿いません。(Java推奨順序：public, protected, private , abstract, static, final, transient, volatile, synchronized, native, strictfp)"/>
+    </module>
+    <module name="RedundantModifier"/>
+    <module name="NeedBraces"/>
+    <module name="BooleanExpressionComplexity">
+      <property name="severity" value="info"/>
+      <message key="booleanExpressionComplexity" value="Boolean式が{0,number,integer}存在します。 {1,number,integer}を超える場合、リファクタリングを検討して下さい。"/>
+    </module>
+    <module name="NPathComplexity">
+      <property name="severity" value="info"/>
+      <message key="npathComplexity" value="メソッド内のNpath(実行パス)が{0,number,integer}存在します。{1,number,integer}を超える場合、リファクタリングを検討して下さい。"/>
+    </module>
+    <module name="ThrowsCount">
+      <property name="severity" value="info"/>
+      <property name="max" value="4"/>
+    </module>
+    <module name="VisibilityModifier">
+      <property name="severity" value="info"/>
+      <message key="variable.notPrivate" value="変数 ''{0}'' は private とし、アクセッサメソッドを持つべきです。privateにできない特別な理由がある場合は、コメントを記述して下さい。"/>
+    </module>
+    <module name="ReturnCount">
+      <property name="severity" value="info"/>
+    </module>
+    <module name="NestedTryDepth">
+      <property name="severity" value="info"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="NestedIfDepth">
+      <property name="severity" value="info"/>
+      <property name="max" value="4"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="MultipleStringLiterals">
+      <property name="severity" value="info"/>
+      <message key="multiple.string.literal" value="ファイル内で文字リテラル({0})が{1}回、使用されています。"/>
+    </module>
+    <module name="InnerAssignment"/>
+    <module name="ExplicitInitialization"/>
+    <module name="AvoidInlineConditionals">
+      <property name="severity" value="info"/>
+      <message key="inline.conditional.avoid" value="インライン条件は使用すべきではありません。"/>
+    </module>
+    <module name="UncommentedMain"/>
+    <module name="UpperEll"/>
+    <module name="MethodLength">
+      <property name="severity" value="info"/>
+      <property name="max" value="50"/>
+      <property name="countEmpty" value="false"/>
+      <message key="maxLen.method" value="メソッドが {0,number,integer} 行あります（{1,number,integer} 行未満が望ましいです）。"/>
+    </module>
+    <module name="AnonInnerLength">
+      <property name="severity" value="info"/>
+      <property name="max" value="600"/>
+      <message key="maxLen.anonInner" value="匿名インナークラスの長さが {0,number,integer} 行あります（{1,number,integer} 行未満が望ましいです）。"/>
+    </module>
+    <module name="CyclomaticComplexity">
+      <property name="severity" value="info"/>
+      <property name="max" value="8"/>
+      <message key="cyclomaticComplexity" value="比較式が{0,number,integer}存在します。{1,number,integer})を超える場合、リファクタリングを検討して下さい。"/>
+    </module>
+    <module name="FinalParameters"/>
+    <module name="CyclomaticComplexity">
+      <property name="severity" value="error"/>
+      <property name="max" value="51"/>
+    </module>
+  </module>
+  <module name="FileLength"/>
+  <module name="NewlineAtEndOfFile"/>
+  <module name="FileLength">
+    <property name="severity" value="info"/>
+    <property name="max" value="600"/>
+    <message key="maxLen.file" value="ファイルが {0,number,integer} 行あります（{1,number,integer} 行未満が望ましいです）。"/>
+  </module>
+  <module name="JavadocPackage">
+    <message key="javadoc.packageInfo" value="package-info.javaファイルがありません。"/>
+    <message key="javadoc.legacyPackageHtml" value="古いpackage.htmlファイルを削除する必要があります。"/>
+  </module>
+  <module name="StrictDuplicateCode">
+    <property name="severity" value="ignore"/>
+    <property name="min" value="10"/>
+    <message key="duplicates.lines" value="{0}行分のコードが重複しています。{1}({2}行目)"/>
+    <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+  </module>
+  <module name="SuppressionCommentFilter"/>
+</module>

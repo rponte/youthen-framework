@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fileset-config file-format-version="1.2.0" simple-config="false">
+  <local-check-config name="youthen" location="src/misc/eclipse/checkstyle.xml" type="project" description="">
+    <property name="charset" value="UTF-8"/>
+    <additional-data name="protect-config-file" value="false"/>
+  </local-check-config>
+  <local-check-config name="youthen-checks" location="src/misc/java/youthen-checks.xml" type="project" description="">
+    <additional-data name="protect-config-file" value="false"/>
+  </local-check-config>
+  <local-check-config name="service-layer-checks" location="src/misc/java/service-layer-checks.xml" type="project" description="サービス層に対するCheckStyle ・ドメインモデル貧血症のチェック">
+    <additional-data name="protect-config-file" value="false"/>
+  </local-check-config>
+  <local-check-config name="test-checks" location="src/misc/java/test-checks.xml" type="project" description="">
+    <additional-data name="protect-config-file" value="false"/>
+  </local-check-config>
+  <local-check-config name="freemarker-checks" location="src/misc/freemarker/checkstyle.xml" type="project" description="">
+    <additional-data name="protect-config-file" value="false"/>
+  </local-check-config>
+  <fileset name="freemarker-checks" enabled="true" check-config-name="freemarker-checks" local="true">
+    <file-match-pattern match-pattern="src/main/resources/.*.ftl$" include-pattern="true"/>
+  </fileset>
+  <fileset name="service-layer" enabled="true" check-config-name="service-layer-checks" local="true">
+    <file-match-pattern match-pattern="src/main/.*/service/service/.*.java$" include-pattern="true"/>
+    <file-match-pattern match-pattern="src/main/.*service/dto/.*.java$" include-pattern="false"/>
+  </fileset>
+  <fileset name="test-checks" enabled="true" check-config-name="test-checks" local="true">
+    <file-match-pattern match-pattern="src/test/.*.java$" include-pattern="true"/>
+  </fileset>
+  <fileset name="prochip-checks" enabled="true" check-config-name="youthen-checks" local="true">
+    <file-match-pattern match-pattern="src/main/.*.java$" include-pattern="true"/>
+    <file-match-pattern match-pattern="src/test/.*.java$" include-pattern="false"/>
+  </fileset>
+  <filter name="FileTypesFilter" enabled="true">
+    <filter-data value="java"/>
+    <filter-data value="ftl"/>
+  </filter>
+  <filter name="WriteProtectedFiles" enabled="true"/>
+  <filter name="FilesFromPackage" enabled="true">
+    <filter-data value="src/main/config"/>
+    <filter-data value="src/test/config"/>
+  </filter>
+</fileset-config>

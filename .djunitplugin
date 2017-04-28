@@ -1,0 +1,13 @@
+#djUnit Plugin Settings
+#Fri Apr 06 10:47:36 JST 2012
+CoverageIncludedPatterns=
+VirtualMockIgnoreLibrary=false
+CoverageExcludedPatterns=.*Test$;
+UseMarker=true
+UseVirtualMock=false
+UseCoverage=true
+BytecodeLibrary=ASM15
+VirtualMockNotIgnorePatterns=
+UseNoverify=false
+CoverageWorkingDirectory=/target/jdunit
+CoverageReportCharset=utf-8
