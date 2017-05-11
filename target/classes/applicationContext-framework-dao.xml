@@ -45,9 +45,9 @@
 				<value>mapper/${sqlmap.database.type}/SystemConfig.hbm.xml</value>
 				<value>mapper/${sqlmap.database.type}/PwdHistory.hbm.xml</value>
 				<value>mapper/${sqlmap.database.type}/DemoTest.hbm.xml</value>
-				<value>mapper/${sqlmap.database.type}/Article.hbm.xml</value>
+				<!-- <value>mapper/${sqlmap.database.type}/Article.hbm.xml</value> -->
 				<value>mapper/${sqlmap.database.type}/SubSystem.hbm.xml</value>
-				<value>mapper/${sqlmap.database.type}/OaRoom.hbm.xml</value>
+				<!-- <value>mapper/${sqlmap.database.type}/OaRoom.hbm.xml</value> -->
 				<value>mapper/${sqlmap.database.type}/UserCompanyRlt.hbm.xml</value>
 				<value>mapper/${sqlmap.database.type}/UserDeptRlt.hbm.xml</value>
 				<value>mapper/${sqlmap.database.type}/UserSystemRlt.hbm.xml</value>
@@ -57,10 +57,10 @@
 				<value>mapper/${sqlmap.database.type}/OsAudittrail.hbm.xml</value>
 				<value>mapper/${sqlmap.database.type}/Notice.hbm.xml</value>
 				<value>mapper/${sqlmap.database.type}/Attached.hbm.xml</value>
-				<value>mapper/${sqlmap.database.type}/OaAim.hbm.xml</value>
+				<!-- <value>mapper/${sqlmap.database.type}/OaAim.hbm.xml</value>
 				<value>mapper/${sqlmap.database.type}/OaDataCenter.hbm.xml</value>
 				<value>mapper/${sqlmap.database.type}/OaMeeting.hbm.xml</value>
-				<value>mapper/${sqlmap.database.type}/OaPicture.hbm.xml</value>
+				<value>mapper/${sqlmap.database.type}/OaPicture.hbm.xml</value> -->
 
 
 				<!-- LiJia Data -->
