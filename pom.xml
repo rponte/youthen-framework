@@ -10,6 +10,7 @@
 	<description> Framework</description>
 	<url>http://www.youthen.com/</url>
 	<inceptionYear>2016</inceptionYear>
+	
 	<developers>
 		<developer>
 			<id>Li Xin</id>
@@ -245,11 +246,11 @@
 		
 		
 		<!-- Oracle数据库驱动 -->
- 		<dependency>
+ 		<!-- <dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc14</artifactId>
 			<version>10.2.0.4.0</version>
-		</dependency>
+		</dependency> -->
 		<!-- c3p0数据库连接池 -->
 		<dependency>
 			<groupId>c3p0</groupId>
@@ -258,11 +259,11 @@
 		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/net.sourceforge.javacsv/javacsv -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>net.sourceforge.javacsv</groupId>
 			<artifactId>javacsv</artifactId>
 			<version>2.1</version>
-		</dependency>
+		</dependency> -->
 
 		<!-- ======================================================================= -->
 
@@ -492,13 +493,13 @@
 		
 		
 		<!-- JSON -->
+       <!-- https://mvnrepository.com/artifact/net.arnx/jsonic -->
 		<dependency>
-			<groupId>net.arnx.jsonic</groupId>
-			<artifactId>jsonic</artifactId>
-			<version>1.2.0</version>
-			<type>jar</type>
-			<scope>compile</scope>
+		    <groupId>net.arnx</groupId>
+		    <artifactId>jsonic</artifactId>
+		    <version>1.2.9</version>
 		</dependency>
+
  	   <dependency>
 			<groupId>org.apache.struts</groupId>
 			<artifactId>struts2-json-plugin</artifactId>
@@ -515,11 +516,11 @@
 		 
 		
 		<!-- 执行linux命令 -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>ganymed-ssh2-build</groupId>
 			<artifactId>ganymed-ssh2-build</artifactId>
 			<version>210</version>
-		</dependency>
+		</dependency> -->
 	</dependencies>
 	<repositories>
 
