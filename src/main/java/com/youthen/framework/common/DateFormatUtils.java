@@ -1,5 +1,6 @@
 package com.youthen.framework.common;
 
+import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -162,8 +163,10 @@ public final class DateFormatUtils {
     }
 
     public static void main(final String[] args) {
-        System.out.println(DateFormatUtils.daysBetween(new Date(),
-                DateFormatUtils.parse("yyyy-MM-dd", "2015-11-04")));
-        System.out.println(DateFormatUtils.format("yyyy-MM-dd", DateFormatUtils.addYear(new Date(), 1)));
+
+        final double totalMoney = 319.80 * Integer.valueOf(1);
+        final BigDecimal d = new BigDecimal(totalMoney);
+        d.setScale(2, BigDecimal.ROUND_HALF_UP);
+        System.out.println(d.longValue());
     }
 }

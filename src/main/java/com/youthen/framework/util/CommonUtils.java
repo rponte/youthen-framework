@@ -1,8 +1,11 @@
 package com.youthen.framework.util;
 
 import java.io.BufferedInputStream;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -27,7 +30,27 @@ public class CommonUtils {
     }
 
     public static void main(final String[] main) {
-        System.out.println(getVertifyCode(4));
+        try {
+
+            final String content = "This is the content to write into file";
+
+            final File file = new File("c:/filename.txt");
+
+            // if file doesnt exists, then create it
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+
+            final FileWriter fw = new FileWriter(file.getAbsoluteFile());
+            final BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(content);
+            bw.close();
+
+            System.out.println("Done");
+
+        } catch (final IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
